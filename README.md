@@ -4,19 +4,23 @@ This project is a simple demonstration of the Gatling (open source) stress testi
 
 ## Analysis
 
-A stress test equivalent to 20 concurrent users was conducted, and a redirection of the output
-can be found [here](./output.txt). A straightforward response time metric was used to determine
-`PASS` or `FAIL`. If the maximum response time exceeded 5000 ms the outcome is `FAIL`, otherwise
-`PASS`. The test was run in separate trials having a unanimous outcome of `FAIL`. This indicates
+A stress test equivalent to 20 concurrent users was conducted (a redirection of the output
+can be found [here](./output.txt)). A straightforward response time metric was used to determine
+`PASS` or `FAIL`. 
+
+- If the maximum response time exceeds 5000 ms the outcome is `FAIL`, otherwise
+`PASS`. 
+
+The test was run in multiple trials having a unanimous outcome of `FAIL`. This indicates
 the site in question [performetriks.com](https://www.performetriks.com) is not well suited for
 high traffic. Response times for all 20 users exceeded 1200 ms which is well outside the recommended
 100-800 ms range for the web. 
 
-As a side note, a similar test was completed for 2 concurrent users where the result was a `PASS`,
+A similar set of trials were completed for 2 concurrent users where the result was a unanimous `PASS`,
 all response times were < 800 ms. This type of performance is consistent with what one may expect
-from a relatively small marketing site where it is unlikely traffic will spike to an average of
+from a relatively small marketing site. Where it is unlikely traffic will spike to an average of
 20 concurrent users, deviating so far from average at a given instant, before there is an opportunity
-to scale the resources accordingly.
+to scale the resources accordingly (avoiding over provisioning).
 
 For the full Gatling output, clone the repository and navigate to
 `./target/gatling/landingsimulation-20210203144013933/index.html` which should open the report in your
