@@ -1,0 +1,75 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36morg.example:PFMTaskOne[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding PFMTaskOne 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mPFMTaskOne[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/james/IdeaProjects/PFMTaskOne/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mgatling-maven-plugin:3.1.0:test[m [1m(default-cli)[m @ [36mPFMTaskOne[0;1m ---[m
+Simulation test.scala.simulations.LandingSimulation started...
+
+================================================================================
+2021-02-03 09:40:20                                           5s elapsed
+---- Requests ------------------------------------------------------------------
+> Global                                                   (OK=14     KO=0     )
+> Get Landing                                              (OK=14     KO=0     )
+
+---- Get Landing Scenario ------------------------------------------------------
+[###################################################-----------------------] 70%
+          waiting: 0      / active: 6      / done: 14    
+================================================================================
+
+
+================================================================================
+2021-02-03 09:40:21                                           6s elapsed
+---- Requests ------------------------------------------------------------------
+> Global                                                   (OK=20     KO=0     )
+> Get Landing                                              (OK=20     KO=0     )
+
+---- Get Landing Scenario ------------------------------------------------------
+[##########################################################################]100%
+          waiting: 0      / active: 0      / done: 20    
+================================================================================
+
+Simulation test.scala.simulations.LandingSimulation completed in 6 seconds
+Parsing log file(s)...
+Parsing log file(s) done
+Generating reports...
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                         20 (OK=20     KO=0     )
+> min response time                                   3755 (OK=3755   KO=-     )
+> max response time                                   5994 (OK=5994   KO=-     )
+> mean response time                                  4733 (OK=4733   KO=-     )
+> std deviation                                        542 (OK=542    KO=-     )
+> response time 50th percentile                       4798 (OK=4798   KO=-     )
+> response time 75th percentile                       4998 (OK=4998   KO=-     )
+> response time 95th percentile                       5657 (OK=5657   KO=-     )
+> response time 99th percentile                       5927 (OK=5927   KO=-     )
+> mean requests/sec                                  2.857 (OK=2.857  KO=-     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                             0 (  0%)
+> 800 ms < t < 1200 ms                                   0 (  0%)
+> t > 1200 ms                                           20 (100%)
+> failed                                                 0 (  0%)
+================================================================================
+
+Reports generated in 0s.
+Please open the following file: /home/james/IdeaProjects/PFMTaskOne/target/gatling/landingsimulation-20210203144013933/index.html
+Global: max of response time is less than 5000.0 : false
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  13.672 s
+[[1;34mINFO[m] Finished at: 2021-02-03T09:40:21-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32mio.gatling:gatling-maven-plugin:3.1.0:test[m [1m(default-cli)[m on project [36mPFMTaskOne[m: [1;31mGatling simulation assertions failed ![m: Process exited with an error: 2 (Exit value: 2) -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

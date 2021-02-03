@@ -1,0 +1,18 @@
+{
+  "simulation": "test.scala.simulations.LandingSimulation",
+  "simulationId": "landingsimulation",
+  "start": 1612363213933,
+  "description": "",
+  "scenarios": ["Get Landing Scenario"],
+  "assertions": [
+{
+  "path": "Global",
+  "target": "max of response time",
+  "condition": "is less than",
+  "expectedValues": [5000.0],
+  "result": false,
+  "message": "Global: max of response time is less than 5000.0",
+  "actualValue": [5994.0]
+}
+  ]
+}
