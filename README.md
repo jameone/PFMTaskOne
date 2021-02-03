@@ -1,4 +1,4 @@
-# Performance analysis on https://www.performetriks.com
+# Performance analysis on: https://www.performetriks.com
 
 This project is a simple demonstration of the Gatling (open source) stress testing tool.
 
